@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    GameObject player;
     Rigidbody2D rb;
     public float forcepower;
     Vector2 slide, jump, force;
@@ -17,7 +16,6 @@ public class Controller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         force = new Vector2(forcepower, 0);
         force3 = new Vector3(forcepower, 0, 0);
-        GameObject player;
         //slide = new Vector2(0, -10*forcepower);
     }
 
@@ -33,6 +31,7 @@ public class Controller : MonoBehaviour
         {
             rb.AddForce(-force);
         }*/
+
     }
 
     void FixedUpdate()
@@ -45,6 +44,8 @@ public class Controller : MonoBehaviour
         {
             gameObject.transform.position -= force3;
         }
+
+
 
         /*if (rb.velocity.x > 1 && Input.GetKey(KeyCode.A))
             force *= 1.001f;
