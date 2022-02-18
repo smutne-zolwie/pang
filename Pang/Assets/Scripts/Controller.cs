@@ -8,6 +8,8 @@ public class Controller : MonoBehaviour
     public float forcepower;
     Vector2 slide, jump, force;
     Vector3 force3;
+    public Transform shootpoint;
+    public GameObject bullet;
 
 
     // Start is called before the first frame update
@@ -32,6 +34,15 @@ public class Controller : MonoBehaviour
             rb.AddForce(-force);
         }*/
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
+
+        void Shoot()
+        {
+            Instantiate(bullet, shootpoint.position, shootpoint.rotation);
+        }
     }
 
     void FixedUpdate()

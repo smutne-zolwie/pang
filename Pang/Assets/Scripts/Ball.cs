@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawningBalls : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     Rigidbody2D rb;
     int spawnposx;
     int spawnposy;
     int spawnforce;
+    GameObject bullet;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //Instantiate - clone object
+
+        //spawning ball
         spawnposx = Random.Range(-10, 10);
         spawnposy = Random.Range(0, 1);
-        
-        Vector2 position = new Vector2(spawnposx, spawnposy);
-        gameObject.transform.position = position;
-
+        Vector3 position = new Vector3(spawnposx, spawnposy, 0);
         Vector2 direction = new Vector2(100, 0);
+        gameObject.transform.position = position;
 
         spawnforce = Random.Range(1, 2);
         if (spawnforce == 1)
@@ -30,6 +30,13 @@ public class SpawningBalls : MonoBehaviour
 
     void Update()
     {
-
+        
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "Bullet(Clone)")
+            Destroy(gameObject);
+    }
+
 }
