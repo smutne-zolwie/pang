@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
@@ -10,18 +11,20 @@ public class Controller : MonoBehaviour
     Vector3 force3;
     public Transform shootpoint;
     public GameObject bullet;
+    public int hearts = 3;
+    public GameObject heart3;
+    public GameObject heart2;
+    public GameObject heart1;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         force = new Vector2(forcepower, 0);
         force3 = new Vector3(forcepower, 0, 0);
         //slide = new Vector2(0, -10*forcepower);
+        Vector3 position = new Vector3(0, 0, 0);
+        gameObject.transform.position = position;
     }
-
-    // Update is called once per frame
 
     void Update()
     {
@@ -43,6 +46,23 @@ public class Controller : MonoBehaviour
         {
             Instantiate(bullet, shootpoint.position, shootpoint.rotation);
         }
+        ShowHearts();
+    }
+
+    void ShowHearts()
+    {
+        if (hearts == 2)
+            Destroy(heart3);
+        else if (hearts == 1)
+            Destroy(heart2);
+        else if (hearts == 0)
+            Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "Ball(Clone)")
+            hearts -= 1;
     }
 
     void FixedUpdate()
@@ -55,12 +75,7 @@ public class Controller : MonoBehaviour
         {
             gameObject.transform.position -= force3;
         }
-
-
-
-        /*if (rb.velocity.x > 1 && Input.GetKey(KeyCode.A))
-            force *= 1.001f;
-        else if (rb.velocity.x < -1 && Input.GetKey(KeyCode.D))
-            force *= 1.001f;*/
     }
+
+    
 }

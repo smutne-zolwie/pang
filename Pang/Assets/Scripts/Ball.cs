@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     int spawnposx;
     int spawnposy;
     int spawnforce;
-    GameObject bullet;
+    public GameObject player;
 
     void Start()
     {
@@ -33,10 +33,9 @@ public class Ball : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "Bullet(Clone)")
             Destroy(gameObject);
     }
-
 }
