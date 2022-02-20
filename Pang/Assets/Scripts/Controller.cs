@@ -11,10 +11,11 @@ public class Controller : MonoBehaviour
     Vector3 force3;
     public Transform shootpoint;
     public GameObject bullet;
-    public int hearts = 3;
+    int hearts = 3;
     public GameObject heart3;
     public GameObject heart2;
     public GameObject heart1;
+    public SpriteMask blackheart;
 
     void Start()
     {
@@ -61,8 +62,10 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Ball(Clone)")
+        if (collision.name == "0(Clone)" || collision.name == "1(Clone)" || collision.name == "Ball4(Clone)")
+        {
             hearts -= 1;
+        }
     }
 
     void FixedUpdate()
@@ -76,6 +79,4 @@ public class Controller : MonoBehaviour
             gameObject.transform.position -= force3;
         }
     }
-
-    
 }
