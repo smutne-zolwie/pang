@@ -160,3 +160,4 @@ Received Import Request.
 Start importing Assets/Objects/Ball1.prefab using Guid(38419e341141d8547bfbe1447af98c95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5805e085f0a536d4d42fa242a797b2e4') in 0.006724 seconds 
   Import took 0.008783 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
