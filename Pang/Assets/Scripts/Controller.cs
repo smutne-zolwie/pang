@@ -16,6 +16,10 @@ public class Controller : MonoBehaviour
     public GameObject heart2;
     public GameObject heart1;
     public SpriteMask blackheart;
+    bool isClimbing;
+    bool isLadder;
+    float vertical;
+    float ladderSpeed = 8;
 
     void Start()
     {
@@ -37,6 +41,7 @@ public class Controller : MonoBehaviour
         {
             rb.AddForce(-force);
         }*/
+        vertical = Input.GetAxis("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -48,6 +53,14 @@ public class Controller : MonoBehaviour
             Instantiate(bullet, shootpoint.position, shootpoint.rotation);
         }
         ShowHearts();
+
+        if (isLadder && Mathf.Abs(vertical) > 0)
+        {
+            isClimbing = true;
+        }
+        print(isClimbing);
+        print(isLadder);
+        print(vertical);
     }
 
     void ShowHearts()
@@ -66,6 +79,19 @@ public class Controller : MonoBehaviour
         {
             hearts -= 1;
         }
+
+        if (collision.name == "Ladder" || collision.name == "Ladder(Clone)")
+        {
+            isLadder = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "Ladder" || collision.name == "Ladder(Clone)")
+        {
+            isClimbing = false;
+            isLadder = false;
+        }
     }
 
     void FixedUpdate()
@@ -77,6 +103,16 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             gameObject.transform.position -= force3;
+        }
+
+        if (isClimbing)
+        {
+            rb.gravityScale = 0;
+            rb.velocity = new Vector2(rb.velocity.x, vertical * ladderSpeed);
+        }
+        else
+        {
+            rb.gravityScale = 2;
         }
     }
 }
