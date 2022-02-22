@@ -196,9 +196,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 4397220180159389045}
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 >>>>>>> parent of d867df7 (15maps and Ladder)
   m_Children:
@@ -207,6 +210,9 @@ Transform:
   - {fileID: 3976140465960308156}
   m_Father: {fileID: 3976140465502382548}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 >>>>>>> parent of d867df7 (15maps and Ladder)
@@ -246,8 +252,11 @@ Transform:
   m_Children:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 4397220178873137989}
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 >>>>>>> parent of d867df7 (15maps and Ladder)
   - {fileID: 3976140465401468768}

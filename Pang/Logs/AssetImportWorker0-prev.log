@@ -16,11 +16,19 @@ C:/Users/areks/Documents/GitHub/pang/Pang
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
+<<<<<<< HEAD
 55754
 Successfully changed project path to: C:/Users/areks/Documents/GitHub/pang/Pang
 C:/Users/areks/Documents/GitHub/pang/Pang
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 28.42 ms, found 3 plugins.
+=======
+65483
+Successfully changed project path to: C:/Users/areks/Documents/GitHub/pang/Pang
+C:/Users/areks/Documents/GitHub/pang/Pang
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 30.41 ms, found 3 plugins.
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 65483
 Successfully changed project path to: C:/Users/areks/Documents/GitHub/pang/Pang
@@ -44,6 +52,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Manage
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
 <<<<<<< HEAD
+<<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -58,6 +67,8 @@ Domain Reload Profiling:
 	ReloadAssembly (924ms)
 		BeginReloadAssembly (34ms)
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56472
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -77,8 +88,13 @@ Domain Reload Profiling:
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 			CreateAndSetChildDomain (0ms)
 		EndReloadAssembly (256ms)
+=======
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (272ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 			CreateAndSetChildDomain (1ms)
 		EndReloadAssembly (272ms)
@@ -89,7 +105,11 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (18ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 			SetupLoadedEditorAssemblies (108ms)
+=======
+			SetupLoadedEditorAssemblies (116ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 			SetupLoadedEditorAssemblies (116ms)
 >>>>>>> parent of d867df7 (15maps and Ladder)
@@ -99,8 +119,13 @@ Domain Reload Profiling:
 				RefreshPlugins (27ms)
 				BeforeProcessingInitializeOnLoad (9ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				ProcessInitializeOnLoadAttributes (52ms)
 				ProcessInitializeOnLoadMethodAttributes (18ms)
+=======
+				ProcessInitializeOnLoadAttributes (56ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 				ProcessInitializeOnLoadAttributes (56ms)
 				ProcessInitializeOnLoadMethodAttributes (20ms)
@@ -111,6 +136,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.002743 seconds.
 Begin MonoManager ReloadAssembly
@@ -134,10 +160,23 @@ Domain Reload Profiling:
 	ReloadAssembly (780ms)
 		BeginReloadAssembly (92ms)
 >>>>>>> parent of d867df7 (15maps and Ladder)
+=======
+Registered in 0.002932 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 28.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.779 seconds
+Domain Reload Profiling:
+	ReloadAssembly (780ms)
+		BeginReloadAssembly (92ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (14ms)
 		EndReloadAssembly (596ms)
@@ -159,6 +198,12 @@ Domain Reload Profiling:
 		EndReloadAssembly (646ms)
 			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
+=======
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (646ms)
+			LoadAssemblies (61ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 			SetupTypeCache (174ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (29ms)
@@ -170,6 +215,9 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (60ms)
 				ProcessInitializeOnLoadAttributes (188ms)
 				ProcessInitializeOnLoadMethodAttributes (9ms)
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
@@ -181,12 +229,16 @@ Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 93.7 MB.
 System memory in use after: 93.8 MB.
 
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2541.
+<<<<<<< HEAD
 Total: 2.192000 ms (FindLiveObjects: 0.177700 ms CreateObjectMapping: 0.061000 ms MarkObjects: 1.932800 ms  DeleteObjects: 0.019700 ms)
 =======
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -195,6 +247,8 @@ System memory in use before: 93.7 MB.
 System memory in use after: 93.8 MB.
 
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2541.
+Total: 2.027000 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.040000 ms MarkObjects: 1.795000 ms  DeleteObjects: 0.025000 ms)
+=======
 Total: 2.027000 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.040000 ms MarkObjects: 1.795000 ms  DeleteObjects: 0.025000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -239,6 +293,36 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Import Request.
 <<<<<<< HEAD
+  path: Assets/Scripts/Ball.cs
+  artifactKey: Guid(55cd570ba383fb04dbb4378e52510e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ball.cs using Guid(55cd570ba383fb04dbb4378e52510e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ecc4207cb9991d4e36d74005fbd18d') in 0.020550 seconds 
+  Import took 0.023229 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 52.1 MB.
+System memory in use after: 52.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2541.
+Total: 2.118400 ms (FindLiveObjects: 0.180700 ms CreateObjectMapping: 0.040400 ms MarkObjects: 1.885500 ms  DeleteObjects: 0.011400 ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+<<<<<<< HEAD
   path: Assets/Ball1.physicsMaterial2D
   artifactKey: Guid(ee893a9c0a14da94689bb9dee3b2804a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Ball1.physicsMaterial2D using Guid(ee893a9c0a14da94689bb9dee3b2804a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '817d41e3d69c2952411b1a7022a95477') in 0.023239 seconds 
@@ -252,6 +336,8 @@ Received Import Request.
 Start importing Assets/Ball4.physicsMaterial2D using Guid(71e2cc75f5ddeb540b25ec8ef604b23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1618505e68565b3e83bf789609618f29') in 0.002255 seconds 
   Import took 0.004490 seconds .
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
   Time since last request: 12.414268 seconds.
   path: Assets/Ball1.physicsMaterial2D
   artifactKey: Guid(ee893a9c0a14da94689bb9dee3b2804a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -535,6 +621,9 @@ System memory in use after: 96.4 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2560.
 Total: 1.998600 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.045600 ms MarkObjects: 1.790600 ms  DeleteObjects: 0.013500 ms)
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
 
 ========================================================================
@@ -552,6 +641,7 @@ Registered in 0.002651 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+<<<<<<< HEAD
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.665 seconds
@@ -612,11 +702,114 @@ Mono: successfully reloaded assembly
 - Completed reload, in  0.670 seconds
 Domain Reload Profiling:
 	ReloadAssembly (671ms)
+=======
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.665 seconds
+Domain Reload Profiling:
+	ReloadAssembly (665ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 		BeginReloadAssembly (83ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (548ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (163ms)
+=======
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (542ms)
+			LoadAssemblies (57ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (160ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (238ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+<<<<<<< HEAD
+				ProcessInitializeOnLoadAttributes (174ms)
+=======
+				ProcessInitializeOnLoadAttributes (173ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+<<<<<<< HEAD
+Refreshing native plugins compatible for Editor in 0.32 ms, found 3 plugins.
+=======
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+>>>>>>> parent of d867df7 (15maps and Ladder)
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2086 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.3 MB.
+System memory in use after: 96.4 MB.
+
+<<<<<<< HEAD
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2566.
+Total: 1.980400 ms (FindLiveObjects: 0.145500 ms CreateObjectMapping: 0.047300 ms MarkObjects: 1.773900 ms  DeleteObjects: 0.013000 ms)
+=======
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2563.
+Total: 1.955800 ms (FindLiveObjects: 0.146500 ms CreateObjectMapping: 0.046800 ms MarkObjects: 1.750100 ms  DeleteObjects: 0.011700 ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+<<<<<<< HEAD
+Registered in 0.002581 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.652 seconds
+Domain Reload Profiling:
+	ReloadAssembly (652ms)
+		BeginReloadAssembly (76ms)
+=======
+Registered in 0.002632 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.670 seconds
+Domain Reload Profiling:
+	ReloadAssembly (671ms)
+		BeginReloadAssembly (83ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (536ms)
+			LoadAssemblies (56ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+=======
 			CreateAndSetChildDomain (24ms)
 		EndReloadAssembly (548ms)
 			LoadAssemblies (58ms)
@@ -677,6 +870,7 @@ Domain Reload Profiling:
 		EndReloadAssembly (536ms)
 			LoadAssemblies (56ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 			SetupTypeCache (160ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (24ms)
@@ -701,6 +895,9 @@ System memory in use after: 96.4 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2569.
 Total: 1.828800 ms (FindLiveObjects: 0.128800 ms CreateObjectMapping: 0.046000 ms MarkObjects: 1.640500 ms  DeleteObjects: 0.012800 ms)
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

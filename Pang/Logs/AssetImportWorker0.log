@@ -16,11 +16,19 @@ C:/Users/areks/Documents/GitHub/pang/Pang
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
+<<<<<<< HEAD
 59717
 Successfully changed project path to: C:/Users/areks/Documents/GitHub/pang/Pang
 C:/Users/areks/Documents/GitHub/pang/Pang
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 28.74 ms, found 3 plugins.
+=======
+49972
+Successfully changed project path to: C:/Users/areks/Documents/GitHub/pang/Pang
+C:/Users/areks/Documents/GitHub/pang/Pang
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 27.79 ms, found 3 plugins.
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 49972
 Successfully changed project path to: C:/Users/areks/Documents/GitHub/pang/Pang
@@ -44,6 +52,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/Manage
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
 <<<<<<< HEAD
+<<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -63,12 +72,23 @@ Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Registered in 0.001307 seconds.
 Native extension for WindowsStandalone target not found
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56000
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001307 seconds.
+Native extension for WindowsStandalone target not found
+>>>>>>> parent of d867df7 (15maps and Ladder)
 Refreshing native plugins compatible for Editor in 27.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  1.081 seconds
 Domain Reload Profiling:
 	ReloadAssembly (1081ms)
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
 		BeginReloadAssembly (35ms)
 			ExecutionOrderSort (0ms)
@@ -76,8 +96,13 @@ Domain Reload Profiling:
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 			CreateAndSetChildDomain (1ms)
 		EndReloadAssembly (256ms)
+=======
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (254ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 			CreateAndSetChildDomain (0ms)
 		EndReloadAssembly (254ms)
@@ -87,8 +112,13 @@ Domain Reload Profiling:
 			SetupTypeCache (83ms)
 			ReleaseScriptCaches (0ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 			RebuildScriptCaches (18ms)
 			SetupLoadedEditorAssemblies (107ms)
+=======
+			RebuildScriptCaches (17ms)
+			SetupLoadedEditorAssemblies (108ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 			RebuildScriptCaches (17ms)
 			SetupLoadedEditorAssemblies (108ms)
@@ -99,8 +129,13 @@ Domain Reload Profiling:
 				RefreshPlugins (27ms)
 				BeforeProcessingInitializeOnLoad (9ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				ProcessInitializeOnLoadAttributes (51ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
+=======
+				ProcessInitializeOnLoadAttributes (52ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 				ProcessInitializeOnLoadAttributes (52ms)
 				ProcessInitializeOnLoadMethodAttributes (18ms)
@@ -111,6 +146,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.002692 seconds.
 Begin MonoManager ReloadAssembly
@@ -134,10 +170,23 @@ Domain Reload Profiling:
 	ReloadAssembly (715ms)
 		BeginReloadAssembly (87ms)
 >>>>>>> parent of d867df7 (15maps and Ladder)
+=======
+Registered in 0.002739 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 26.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.715 seconds
+Domain Reload Profiling:
+	ReloadAssembly (715ms)
+		BeginReloadAssembly (87ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (18ms)
 		EndReloadAssembly (605ms)
@@ -145,11 +194,16 @@ Domain Reload Profiling:
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (169ms)
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
 			CreateAndSetChildDomain (13ms)
 		EndReloadAssembly (589ms)
 			LoadAssemblies (58ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (163ms)
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (27ms)
@@ -159,8 +213,13 @@ Domain Reload Profiling:
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (26ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (52ms)
 				ProcessInitializeOnLoadAttributes (177ms)
+=======
+				BeforeProcessingInitializeOnLoad (50ms)
+				ProcessInitializeOnLoadAttributes (175ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 				BeforeProcessingInitializeOnLoad (50ms)
 				ProcessInitializeOnLoadAttributes (175ms)
@@ -175,7 +234,11 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
 <<<<<<< HEAD
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+=======
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
 >>>>>>> parent of d867df7 (15maps and Ladder)
@@ -186,7 +249,11 @@ System memory in use after: 93.8 MB.
 
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2541.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Total: 2.142400 ms (FindLiveObjects: 0.178100 ms CreateObjectMapping: 0.046100 ms MarkObjects: 1.899600 ms  DeleteObjects: 0.017900 ms)
+=======
+Total: 1.968000 ms (FindLiveObjects: 0.134100 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.774700 ms  DeleteObjects: 0.017900 ms)
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 Total: 1.968000 ms (FindLiveObjects: 0.134100 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.774700 ms  DeleteObjects: 0.017900 ms)
 >>>>>>> parent of d867df7 (15maps and Ladder)
@@ -203,6 +270,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
 <<<<<<< HEAD
   path: Assets/Objects/Ball2.prefab
   artifactKey: Guid(edee3974aef99c4489c12cde8efcafdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -233,6 +301,8 @@ Received Import Request.
 Start importing Assets/Objects/Ball1.prefab using Guid(38419e341141d8547bfbe1447af98c95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5805e085f0a536d4d42fa242a797b2e4') in 0.006724 seconds 
   Import took 0.008783 seconds .
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
   path: Assets/Objects/Ball3.prefab
   artifactKey: Guid(756bd6ee81a23c84fb30ca56e812108e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Objects/Ball3.prefab using Guid(756bd6ee81a23c84fb30ca56e812108e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92b1fa5d0c7de0c1cf67abc0642ac13a') in 0.077932 seconds 
