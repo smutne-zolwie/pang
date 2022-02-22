@@ -195,14 +195,20 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.183, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 4397220180159389045}
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
   m_Children:
   - {fileID: 3976140465156955713}
   - {fileID: 3976140464322498049}
   - {fileID: 3976140465960308156}
   m_Father: {fileID: 3976140465502382548}
+<<<<<<< HEAD
+>>>>>>> parent of d867df7 (15maps and Ladder)
+=======
 >>>>>>> parent of d867df7 (15maps and Ladder)
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,8 +245,11 @@ Transform:
   m_LocalScale: {x: 6.5200415, y: 4.9119043, z: 1}
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 4397220178873137989}
 =======
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
   - {fileID: 3976140465401468768}
 >>>>>>> parent of d867df7 (15maps and Ladder)
   m_Father: {fileID: 0}

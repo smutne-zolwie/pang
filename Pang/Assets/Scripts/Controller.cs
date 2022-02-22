@@ -49,11 +49,14 @@ public class Controller : MonoBehaviour
         }
         ShowHearts();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (isLadder && Mathf.Abs(vertical) > 0)
         {
             isClimbing = true;
         }
+=======
+>>>>>>> parent of d867df7 (15maps and Ladder)
 =======
 >>>>>>> parent of d867df7 (15maps and Ladder)
     }
