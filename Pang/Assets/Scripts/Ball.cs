@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Bullet(Clone)")
+        if (collision.CompareTag("Bullet"))
         {
             Destroy(gameObject);
             for (int i = 0; i < 2; i++)
@@ -49,7 +49,7 @@ public class Ball : MonoBehaviour
                 smallerball[i].name = i.ToString();
             }
         }
-        else if (collision.name == "Player(Clone)")
+        else if (collision.CompareTag("Player"))
             Destroy(gameObject);
     }
 }

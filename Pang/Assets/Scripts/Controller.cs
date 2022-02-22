@@ -58,9 +58,6 @@ public class Controller : MonoBehaviour
         {
             isClimbing = true;
         }
-        print(isClimbing);
-        print(isLadder);
-        print(vertical);
     }
 
     void ShowHearts()
@@ -75,19 +72,19 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "0(Clone)" || collision.name == "1(Clone)" || collision.name == "Ball4(Clone)")
+        if (collision.CompareTag("Ball"))
         {
             hearts -= 1;
         }
 
-        if (collision.name == "Ladder" || collision.name == "Ladder(Clone)")
+        if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Ladder" || collision.name == "Ladder(Clone)")
+        if (collision.CompareTag("Ladder"))
         {
             isClimbing = false;
             isLadder = false;
