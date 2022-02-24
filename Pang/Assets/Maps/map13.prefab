@@ -772,6 +772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3232721621808573470}
+  - component: {fileID: 2837367369956481397}
   m_Layer: 0
   m_Name: map13
   m_TagString: Untagged
@@ -802,6 +803,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2837367369956481397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232721621808573471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327227ed0cdb5e489d99deda78397e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3976140465502382547, guid: 11359993f1a49834196f837710807e28, type: 3}
+  ball:
+  - {fileID: 6741882330802233881, guid: 9b78f319632cf254295a5cb9f130d3da, type: 3}
+  - {fileID: 6741882330802233881, guid: 9b78f319632cf254295a5cb9f130d3da, type: 3}
+  - {fileID: 977396725887548391, guid: 756bd6ee81a23c84fb30ca56e812108e, type: 3}
+  - {fileID: 977396725887548391, guid: 756bd6ee81a23c84fb30ca56e812108e, type: 3}
+  timer: 80
+  ballpos:
+  - {x: -4, y: 4, z: 0}
+  - {x: 4, y: 4, z: 0}
+  - {x: -8, y: 4, z: 0}
+  - {x: 8, y: 4, z: 0}
+  playerpos: {x: 0, y: -1.5}
 --- !u!1 &3232721621885047338
 GameObject:
   m_ObjectHideFlags: 0

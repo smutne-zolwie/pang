@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7870276703607366307}
+  - component: {fileID: 4032337645264746466}
   m_Layer: 0
   m_Name: map5
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4032337645264746466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870276703607366308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327227ed0cdb5e489d99deda78397e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  ball:
+  - {fileID: 977396725887548391, guid: 756bd6ee81a23c84fb30ca56e812108e, type: 3}
+  - {fileID: 977396725887548391, guid: 756bd6ee81a23c84fb30ca56e812108e, type: 3}
+  timer: 50
+  ballpos:
+  - {x: 8, y: 3, z: 0}
+  - {x: -8, y: 3, z: 0}
+  playerpos: {x: 0, y: 0, z: 0}
 --- !u!1 &7870276704153790044
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,8 +27,6 @@ public class Controller : MonoBehaviour
         force = new Vector2(forcepower, 0);
         force3 = new Vector3(forcepower, 0, 0);
         //slide = new Vector2(0, -10*forcepower);
-        Vector3 position = new Vector3(0, 0, 0);
-        gameObject.transform.position = position;
     }
 
     void Update()
@@ -72,7 +70,7 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ball"))
+        if (collision.CompareTag("Ball") || collision.CompareTag("Ball1"))
         {
             hearts -= 1;
         }

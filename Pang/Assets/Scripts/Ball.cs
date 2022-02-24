@@ -43,10 +43,13 @@ public class Ball : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             Destroy(gameObject);
-            for (int i = 0; i < 2; i++)
+            if (CompareTag("Ball1") == false)
             {
-                Instantiate<GameObject>(smallerball[i], gameObject.transform.position, gameObject.transform.rotation);
-                smallerball[i].name = i.ToString();
+                for (int i = 0; i < 2; i++)
+                {
+                    Instantiate<GameObject>(smallerball[i], gameObject.transform.position, gameObject.transform.rotation);
+                    smallerball[i].name = i.ToString();
+                }
             }
         }
         else if (collision.CompareTag("Player"))
