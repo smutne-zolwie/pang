@@ -9,6 +9,7 @@ public class Map : MonoBehaviour
     public float timer;
     public Vector3[] ballpos;
     public Vector2 playerpos;
+    public bool levelIsCompleted = false;
 
     void Start()
     {
@@ -22,5 +23,11 @@ public class Map : MonoBehaviour
     void Update()
     {        
         timer -= Time.unscaledDeltaTime;
+        if (timer > 0 && GameObject.FindGameObjectWithTag("Ball") == null && GameObject.FindGameObjectWithTag("Ball1") == null)
+        {
+            levelIsCompleted = true;
+        }
+        print(levelIsCompleted);
     }
 }
+
