@@ -6,14 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject[] map;
-    public int[] mapv;
-    public bool Map;
-    public bool levelIsCompleted;
-
-    private void Start()
-    {
-        Map = GetComponent<bool>();
-    }
+    int i = 0;
 
     public void PlayGame()
     {
@@ -28,23 +21,19 @@ public class Menu : MonoBehaviour
 
     public void Campaign()
     {
-        //void Update()
-        //{
-        //    for (int i = 0; i < map.Length; i++)
-        //    {
-        //        if (levelIsCompleted)
-        //        {
-        //            mapv[i] += i;
-        //        }
-        //        print(map[i]);
-        //    }
-        //}
-        //Update();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //    levelIsCompleted = true;
-        //if (levelIsCompleted)
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Instantiate(map[0]);
+    }
 
+    public void NextLevel()
+    {
+        map[i].SetActive(false);
+        map[i+1].SetActive(true);
+        i += 1;
+    }
+
+    public void DestroyPlayer()
+    {
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 }

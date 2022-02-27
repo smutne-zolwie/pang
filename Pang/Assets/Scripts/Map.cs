@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Map : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Map : MonoBehaviour
     public Vector3[] ballpos;
     public Vector2 playerpos;
     public bool levelIsCompleted = false;
+    public GameObject panel;
 
     void Start()
     {
@@ -27,7 +29,14 @@ public class Map : MonoBehaviour
         {
             levelIsCompleted = true;
         }
-        print(levelIsCompleted);
+        ShowImage();
+    }
+    public void ShowImage()
+    {
+        if (levelIsCompleted)
+        {
+            panel.SetActive(true);
+        }
     }
 }
 

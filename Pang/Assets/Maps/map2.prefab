@@ -280,6 +280,8 @@ MonoBehaviour:
   - {x: -6, y: 4, z: 0}
   - {x: -4, y: 4, z: 0}
   playerpos: {x: -8.5, y: 0.25}
+  levelIsCompleted: 0
+  panel: {fileID: 0}
 --- !u!1 &8524783301793769643
 GameObject:
   m_ObjectHideFlags: 0

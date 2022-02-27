@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 257433524}
   - component: {fileID: 257433523}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Campaign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,6 +769,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: Campaign
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 722375342}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2087,14 +2099,13 @@ GameObject:
   m_Component:
   - component: {fileID: 722375343}
   - component: {fileID: 722375344}
-  - component: {fileID: 722375345}
   m_Layer: 5
   m_Name: PlayModuleMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &722375343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2130,29 +2141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2920b951ca5d0443a441b59fff1bc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map:
-  - {fileID: 0}
-  mapv: 
-  Map: 0
-  levelIsCompleted: 0
---- !u!114 &722375345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722375342}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8327227ed0cdb5e489d99deda78397e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  ball: []
-  timer: 0
-  ballpos: []
-  playerpos: {x: 0, y: 0}
-  levelIsCompleted: 0
+  map: []
 --- !u!1 &724697765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &724697766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2206,9 +2195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: []
-  mapv: 
-  Map: 0
-  levelIsCompleted: 0
 --- !u!1 &764766265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,9 +3679,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: []
-  mapv: 
-  Map: 0
-  levelIsCompleted: 0
 --- !u!1 &1395080960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5294,7 +5277,7 @@ GameObject:
   - component: {fileID: 2081497407}
   - component: {fileID: 2081497406}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Random
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
