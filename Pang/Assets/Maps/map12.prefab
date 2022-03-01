@@ -167,6 +167,8 @@ MonoBehaviour:
   - {x: 5, y: 3, z: 0}
   - {x: 0, y: 4, z: 0}
   playerpos: {x: 0, y: 0}
+  levelIsCompleted: 0
+  panel: {fileID: 0}
 --- !u!1 &8345894231941069800
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5846899264764696035, guid: 8c4e4dbf29e06444b95a7664105fcba2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5846899264764696035, guid: 8c4e4dbf29e06444b95a7664105fcba2, type: 3}
       propertyPath: m_LocalRotation.w

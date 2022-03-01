@@ -8,13 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: b84bbe23f9209764dbc09b3a8a694d7a
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Map1.unity
+    path: Assets/Scenes/Campaign.unity
     guid: 394d613b04171f147b1dd5e787996489
   - enabled: 1
-    path: Assets/Scenes/Map2.unity
-    guid: 855eb5ecf989fca41ae1fcf07f08a9be
+    path: Assets/Scenes/Random.unity
+    guid: 2bb8aabbbad8d4245a31f620933f1ff7
   m_configObjects: {}

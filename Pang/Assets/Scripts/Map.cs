@@ -36,6 +36,7 @@ public class Map : MonoBehaviour
         if (levelIsCompleted)
         {
             panel.SetActive(true);
+            //stop timer
         }
     }
 }

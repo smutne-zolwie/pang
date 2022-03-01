@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
     public GameObject[] map;
     int i = 0;
-
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    //string levelstr; 22
+    public Button[] levels;
+    public int buttonvalue;
 
     public void QuitGame()
     {
@@ -19,10 +19,16 @@ public class Menu : MonoBehaviour
         Debug.Log("quit");
     }
 
-    public void Campaign()
+    public void GetValue(string arg)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Instantiate(map[0]);
+        //levelstr = arg; 22
+        //dynamic string
+    }
+    
+    public void CampaignMode()
+    {
+        buttonvalue = int.Parse(EventSystem.current.currentSelectedGameObject.name) - 1; //-1 bo tablice numerujemy od 0 :))
+        map[buttonvalue].SetActive(true);
     }
 
     public void NextLevel()
@@ -30,10 +36,24 @@ public class Menu : MonoBehaviour
         map[i].SetActive(false);
         map[i+1].SetActive(true);
         i += 1;
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 
-    public void DestroyPlayer()
+    public void RandomMode()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        SceneManager.LoadScene(2);
+    }
+
+    public void EasyRandom()
+    {
+        //SceneManager.LoadScene(2);
+        //i = Random.Range(0, 5);
+        //print(i);
+        //map[i].SetActive(true);
+    }
+
+    private void Update()
+    {
+        
     }
 }
