@@ -12,6 +12,7 @@ public class Map : MonoBehaviour
     public Vector2 playerpos;
     public bool levelIsCompleted = false;
     public GameObject panel;
+    public int index;
 
     void Start()
     {

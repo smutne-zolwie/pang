@@ -8,6 +8,7 @@ TagManager:
   - Ladder
   - Bullet
   - Ball1
+  - Map
   layers:
   - Default
   - TransparentFX

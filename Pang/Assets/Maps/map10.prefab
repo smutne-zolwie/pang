@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8480881870454523064}
   m_Layer: 0
   m_Name: map10
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   - {x: -8, y: 5, z: 0}
   - {x: 0, y: 5, z: 0}
   playerpos: {x: 0, y: 0}
+  levelIsCompleted: 0
+  panel: {fileID: 0}
 --- !u!1 &4001910228409329559
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,9 +8,7 @@ using UnityEngine.EventSystems;
 public class Menu : MonoBehaviour
 {
     public GameObject[] map;
-    int i = 0;
-    //string levelstr; 22
-    public Button[] levels;
+    public int i;
     public int buttonvalue;
 
     public void QuitGame()
@@ -18,42 +16,41 @@ public class Menu : MonoBehaviour
         Application.Quit();
         Debug.Log("quit");
     }
-
-    public void GetValue(string arg)
-    {
-        //levelstr = arg; 22
-        //dynamic string
-    }
     
     public void CampaignMode()
     {
-        buttonvalue = int.Parse(EventSystem.current.currentSelectedGameObject.name) - 1; //-1 bo tablice numerujemy od 0 :))
+        buttonvalue = int.Parse(EventSystem.current.currentSelectedGameObject.name) - 1;
         map[buttonvalue].SetActive(true);
+        i = buttonvalue;
     }
 
-    public void NextLevel()
+    public void NextLevelCampaign()
     {
+        print(GameObject.FindGameObjectWithTag("Map").name);
+        string f = GameObject.FindGameObjectWithTag("Map").name;
+        i = int.Parse(f.ToString())-1;
+        //map[i] = GameObject.FindGameObjectWithTag("Map");
         map[i].SetActive(false);
         map[i+1].SetActive(true);
         i += 1;
         Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 
-    public void RandomMode()
+    public void EasyRandomMode()
     {
-        SceneManager.LoadScene(2);
+        i = Random.Range(0, 5);
+        map[i].SetActive(true);
     }
 
-    public void EasyRandom()
+    public void MediumRandomMode()
     {
-        //SceneManager.LoadScene(2);
-        //i = Random.Range(0, 5);
-        //print(i);
-        //map[i].SetActive(true);
+        i = Random.Range(5, 10);
+        map[i].SetActive(true);
     }
 
-    private void Update()
+    public void HardRandomMode()
     {
-        
+        i = Random.Range(10, 15);
+        map[i].SetActive(true);
     }
 }
