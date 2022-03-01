@@ -21,7 +21,6 @@ public class Menu : MonoBehaviour
     {
         buttonvalue = int.Parse(EventSystem.current.currentSelectedGameObject.name) - 1;
         map[buttonvalue].SetActive(true);
-        i = buttonvalue;
     }
 
     public void NextLevelCampaign()
@@ -29,7 +28,6 @@ public class Menu : MonoBehaviour
         print(GameObject.FindGameObjectWithTag("Map").name);
         string f = GameObject.FindGameObjectWithTag("Map").name;
         i = int.Parse(f.ToString())-1;
-        //map[i] = GameObject.FindGameObjectWithTag("Map");
         map[i].SetActive(false);
         map[i+1].SetActive(true);
         i += 1;
@@ -52,5 +50,29 @@ public class Menu : MonoBehaviour
     {
         i = Random.Range(10, 15);
         map[i].SetActive(true);
+    }
+
+
+    public void NextEasyLevel()
+    {
+        GameObject.FindGameObjectWithTag("Map").SetActive(false);
+        EasyRandomMode();
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+    }
+
+
+    public void NextMediumLevel()
+    {
+        GameObject.FindGameObjectWithTag("Map").SetActive(false);
+        MediumRandomMode();
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+    }
+
+
+    public void NextHardLevel()
+    {
+        GameObject.FindGameObjectWithTag("Map").SetActive(false);
+        HardRandomMode();
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 }
