@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     public int imode;
     public GameObject randomModeCompleted;
     public GameObject campaignModeCompleted;
-    Map levelCompleted;
+    //Map levelCompleted;
 
     public void CampaignMode()
     {
@@ -34,26 +34,20 @@ public class Menu : MonoBehaviour
         imode = 1;
         mode = rmode;
         if (rmode == "easy")
-        {
             i = Random.Range(0, 5);
-            map[i].SetActive(true);
-        }
         else if(rmode == "medium")
-        {
             i = Random.Range(5, 10);
-            map[i].SetActive(true);
-        }
         else if (rmode == "hard")
-        {
             i = Random.Range(10, 15);
-            map[i].SetActive(true);
-        }
+        map[i].SetActive(true);
+        Instantiate(map[i], map[i].transform.position, map[i].transform.rotation);
+        map[i].SetActive(false);
     }
 
     public void NextLevelRandom()
     {
-        levelCompleted = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
-        levelCompleted.levelIsCompleted = false;
+        //levelCompleted = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
+        //levelCompleted.levelIsCompleted = false;
         GameObject.FindGameObjectWithTag("Map").SetActive(false);
         RandomMode(mode);
         Destroy(GameObject.FindGameObjectWithTag("Player"));
