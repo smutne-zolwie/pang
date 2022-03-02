@@ -5,15 +5,20 @@ using UnityEngine.UI;
 
 public class Map : MonoBehaviour
 {
+    //public Menu menu;
     public GameObject player;
     public GameObject[] ball;
     public float timer;
     public Vector3[] ballpos;
     public Vector2 playerpos;
     public bool levelIsCompleted = false;
-    public GameObject panel;
-    public int index;
+    public GameObject[] panel;
+    Menu menu;
 
+    private void Awake()
+    {
+        menu = GameObject.Find("UI").GetComponent<Menu>();
+    }
     void Start()
     {
         for (int i = 0; i < ball.Length; i++)
@@ -24,7 +29,8 @@ public class Map : MonoBehaviour
     }
 
     void Update()
-    {        
+    {
+        print(levelIsCompleted);
         timer -= Time.unscaledDeltaTime;
         if (timer > 0 && GameObject.FindGameObjectWithTag("Ball") == null && GameObject.FindGameObjectWithTag("Ball1") == null)
         {
@@ -34,10 +40,10 @@ public class Map : MonoBehaviour
     }
     public void ShowImage()
     {
+        //panel[menu.imode].SetActive(false);
         if (levelIsCompleted)
         {
-            panel.SetActive(true);
-            //stop timer
+            panel[menu.imode].SetActive(true);
         }
     }
 }

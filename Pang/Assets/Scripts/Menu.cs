@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
@@ -9,70 +8,65 @@ public class Menu : MonoBehaviour
 {
     public GameObject[] map;
     public int i;
-    public int buttonvalue;
+    public string mode;
+    public int imode;
+    public GameObject randomModeCompleted;
+    public GameObject campaignModeCompleted;
+    Map levelCompleted;
 
-    public void QuitGame()
-    {
-        Application.Quit();
-        Debug.Log("quit");
-    }
-    
     public void CampaignMode()
     {
-        buttonvalue = int.Parse(EventSystem.current.currentSelectedGameObject.name) - 1;
-        map[buttonvalue].SetActive(true);
+        imode = 0;
+        i = int.Parse(EventSystem.current.currentSelectedGameObject.name) - 1;
+        map[i].SetActive(true);
     }
 
     public void NextLevelCampaign()
     {
-        print(GameObject.FindGameObjectWithTag("Map").name);
-        string f = GameObject.FindGameObjectWithTag("Map").name;
-        i = int.Parse(f.ToString())-1;
         map[i].SetActive(false);
         map[i+1].SetActive(true);
         i += 1;
         Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 
-    public void EasyRandomMode()
+    public void RandomMode(string rmode)
     {
-        i = Random.Range(0, 5);
-        map[i].SetActive(true);
+        imode = 1;
+        mode = rmode;
+        if (rmode == "easy")
+        {
+            i = Random.Range(0, 5);
+            map[i].SetActive(true);
+        }
+        else if(rmode == "medium")
+        {
+            i = Random.Range(5, 10);
+            map[i].SetActive(true);
+        }
+        else if (rmode == "hard")
+        {
+            i = Random.Range(10, 15);
+            map[i].SetActive(true);
+        }
     }
 
-    public void MediumRandomMode()
+    public void NextLevelRandom()
     {
-        i = Random.Range(5, 10);
-        map[i].SetActive(true);
-    }
-
-    public void HardRandomMode()
-    {
-        i = Random.Range(10, 15);
-        map[i].SetActive(true);
-    }
-
-
-    public void NextEasyLevel()
-    {
+        levelCompleted = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
+        levelCompleted.levelIsCompleted = false;
         GameObject.FindGameObjectWithTag("Map").SetActive(false);
-        EasyRandomMode();
+        RandomMode(mode);
         Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
 
-
-    public void NextMediumLevel()
+    public void FinishRandomMode()
     {
-        GameObject.FindGameObjectWithTag("Map").SetActive(false);
-        MediumRandomMode();
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        randomModeCompleted.SetActive(true);
     }
 
-
-    public void NextHardLevel()
+    public void QuitGame()
     {
-        GameObject.FindGameObjectWithTag("Map").SetActive(false);
-        HardRandomMode();
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Application.Quit();
+        Debug.Log("quit");
     }
 }
