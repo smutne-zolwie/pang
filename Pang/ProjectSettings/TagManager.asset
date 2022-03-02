@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Ball1
   - Map
+  - Ball2
+  - Ball3
+  - Ball4
   layers:
   - Default
   - TransparentFX

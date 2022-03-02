@@ -12,7 +12,6 @@ public class Menu : MonoBehaviour
     public int imode;
     public GameObject randomModeCompleted;
     public GameObject campaignModeCompleted;
-    //Map levelCompleted;
 
     public void CampaignMode()
     {
@@ -46,8 +45,6 @@ public class Menu : MonoBehaviour
 
     public void NextLevelRandom()
     {
-        //levelCompleted = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
-        //levelCompleted.levelIsCompleted = false;
         GameObject.FindGameObjectWithTag("Map").SetActive(false);
         RandomMode(mode);
         Destroy(GameObject.FindGameObjectWithTag("Player"));

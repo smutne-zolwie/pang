@@ -8,9 +8,11 @@ public class Ball : MonoBehaviour
     int spawnforce;
     public GameObject[] smallerball;
     Vector2 smallerballforce;
+    Points value;
 
     void Start()
     {
+        value = GameObject.Find("Points").GetComponent<Points>();
         rb = GetComponent<Rigidbody2D>();
         if(gameObject.name == "1(Clone)" || gameObject.name == "0(Clone)")
         {
@@ -33,13 +35,17 @@ public class Ball : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (gameObject.CompareTag("Ball1"))
+            value.points += 200;
+        else if (gameObject.CompareTag("Ball2"))
+            value.points += 150;
+        else if (gameObject.CompareTag("Ball3"))
+            value.points += 100;
+        else if (gameObject.CompareTag("Ball4"))
+            value.points += 50;
+
         if (collision.CompareTag("Bullet"))
         {
             Destroy(gameObject);
@@ -53,6 +59,8 @@ public class Ball : MonoBehaviour
             }
         }
         else if (collision.CompareTag("Player"))
+        {
             Destroy(gameObject);
+        }
     }
 }

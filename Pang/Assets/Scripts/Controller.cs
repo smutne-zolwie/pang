@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
     Vector3 force3;
     public Transform shootpoint;
     public GameObject bullet;
-    int hearts = 3;
+    public int hearts = 3;
     public GameObject heart3;
     public GameObject heart2;
     public GameObject heart1;
@@ -70,7 +70,7 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ball") || collision.CompareTag("Ball1"))
+        if (collision.CompareTag("Ball1") || collision.CompareTag("Ball2") || collision.CompareTag("Ball3") || collision.CompareTag("Ball4"))
         {
             hearts -= 1;
         }

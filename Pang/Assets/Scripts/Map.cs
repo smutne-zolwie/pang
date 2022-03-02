@@ -13,9 +13,11 @@ public class Map : MonoBehaviour
     public bool levelIsCompleted = false;
     public GameObject[] panel;
     Menu menu;
+    //public int timepoints;
 
     private void Awake()
     {
+        Time.timeScale = 1;
         menu = GameObject.Find("UI").GetComponent<Menu>();
     }
     void Start()
@@ -29,8 +31,9 @@ public class Map : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.unscaledDeltaTime;
-        if (timer > 0 && GameObject.FindGameObjectWithTag("Ball") == null && GameObject.FindGameObjectWithTag("Ball1") == null)
+        if(levelIsCompleted == false)
+            timer -= Time.unscaledDeltaTime;
+        if (timer > 0 && GameObject.FindGameObjectWithTag("Ball1") == null && GameObject.FindGameObjectWithTag("Ball2") == null && GameObject.FindGameObjectWithTag("Ball3") == null && GameObject.FindGameObjectWithTag("Ball4") == null)
         {
             levelIsCompleted = true;
         }
@@ -41,6 +44,7 @@ public class Map : MonoBehaviour
         if (levelIsCompleted)
         {
             panel[menu.imode].SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
