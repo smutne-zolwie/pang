@@ -25,8 +25,11 @@ public class Points : MonoBehaviour
 
     private void Update()
     {
-        time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
-        Tpoints.text = points.ToString();
-        Timer.text = ((int)time.timer).ToString();
+        if(GameObject.FindGameObjectWithTag("Map") != null)
+        {
+            time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
+            Tpoints.text = points.ToString();
+            Timer.text = ((int)time.timer).ToString();
+        }
     }
 }

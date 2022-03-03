@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        //value = GameObject.Find("Points").GetComponent<Points>();
+        value = GameObject.Find("MapUI").GetComponent<Points>();
         rb = GetComponent<Rigidbody2D>();
         if(gameObject.name == "1(Clone)" || gameObject.name == "0(Clone)")
         {
