@@ -791,13 +791,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84483490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad97a714129cf5f4c962bae6e8b85d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 84483492}
-  backgroundImage: {fileID: 781818195}
 --- !u!222 &84483495
 CanvasRenderer:
   m_ObjectHideFlags: 0
