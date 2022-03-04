@@ -20,27 +20,21 @@ public class Controller : MonoBehaviour
     bool isLadder;
     float vertical;
     float ladderSpeed = 8;
+    public GameObject OnDestroyPanel;
 
     void Start()
     {
+        //do poruszania siê, zmienne
         rb = GetComponent<Rigidbody2D>();
         force = new Vector2(forcepower, 0);
         force3 = new Vector3(forcepower, 0, 0);
-        //slide = new Vector2(0, -10*forcepower);
     }
 
     void Update()
     {
-        /*if (Input.GetKey(KeyCode.D))
-        {          
-            rb.AddForce(force);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.AddForce(-force);
-        }*/
         vertical = Input.GetAxis("Vertical");
 
+        //strzelanie
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
@@ -52,12 +46,14 @@ public class Controller : MonoBehaviour
         }
         ShowHearts();
 
+        //dla drabiny
         if (isLadder && Mathf.Abs(vertical) > 0)
         {
             isClimbing = true;
         }
     }
 
+    //pokazywanie serc
     void ShowHearts()
     {
         if (hearts == 2)
@@ -65,7 +61,10 @@ public class Controller : MonoBehaviour
         else if (hearts == 1)
             Destroy(heart2);
         else if (hearts == 0)
+        {
             Destroy(gameObject);
+            OnDestroyPanel.SetActive(true);
+        }  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,11 +74,14 @@ public class Controller : MonoBehaviour
             hearts -= 1;
         }
 
+        //dla drabiny
         if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
         }
     }
+
+    //dla drabiny
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Ladder"))
@@ -91,6 +93,7 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
+        //sterowanie
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.transform.position += force3;
@@ -100,6 +103,7 @@ public class Controller : MonoBehaviour
             gameObject.transform.position -= force3;
         }
 
+        //dla drabiny
         if (isClimbing)
         {
             rb.gravityScale = 0;

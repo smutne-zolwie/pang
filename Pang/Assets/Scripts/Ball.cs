@@ -12,11 +12,11 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        value = GameObject.Find("MapUI").GetComponent<Points>();
+        value = GameObject.Find("MapUI").GetComponent<Points>(); //zeby liczylo punkty
         rb = GetComponent<Rigidbody2D>();
         if(gameObject.name == "1(Clone)" || gameObject.name == "0(Clone)")
         {
-            //spawning as child
+            //spawnowanie jako dziecko
             smallerballforce = new Vector2(200, 0);
             if (gameObject.name == "0(Clone)")
                 rb.AddForce(smallerballforce);
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         }
         else
         {
-            //spawning ball
+            //spawnowanie noramalnie
             Vector2 direction = new Vector2(100, 0);
             spawnforce = Random.Range(1, 2);
             if (spawnforce == 1)
@@ -37,6 +37,7 @@ public class Ball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        //punktacja
         if (gameObject.CompareTag("Ball1"))
             value.points += 200;
         else if (gameObject.CompareTag("Ball2"))
@@ -46,6 +47,7 @@ public class Ball : MonoBehaviour
         else if (gameObject.CompareTag("Ball4"))
             value.points += 50;
 
+        //jezeli zestrzelona - tworzy nowe 2 dziecka
         if (collision.CompareTag("Bullet"))
         {
             Destroy(gameObject);
@@ -58,6 +60,8 @@ public class Ball : MonoBehaviour
                 }
             }
         }
+
+        //jak zderzy sie z graczem niszczy siê - zmodyfikujê, ¿e dostaje jak¹œ si³ê czy cos
         else if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);

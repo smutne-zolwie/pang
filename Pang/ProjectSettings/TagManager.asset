@@ -12,6 +12,7 @@ TagManager:
   - Ball2
   - Ball3
   - Ball4
+  - Points
   layers:
   - Default
   - TransparentFX

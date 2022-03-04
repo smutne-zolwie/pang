@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
     public int imode;
     public GameObject randomModeCompleted;
     public GameObject campaignModeCompleted;
+    Points pts;
 
     public void CampaignMode()
     {
@@ -53,6 +54,50 @@ public class Menu : MonoBehaviour
     public void FinishRandomMode()
     {
         randomModeCompleted.SetActive(true);
+    }
+
+    public void HideActiveMap()
+    {
+        GameObject.FindGameObjectWithTag("Map").SetActive(false);
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        
+        if (GameObject.FindGameObjectsWithTag("Ball1") != null)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Ball1").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Ball1")[i]);
+            }
+        }
+        if (GameObject.FindGameObjectsWithTag("Ball2") != null)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Ball2").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Ball2")[i]);
+            }
+        }
+        if (GameObject.FindGameObjectsWithTag("Ball3") != null)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Ball3").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Ball3")[i]);
+            }
+        }
+        if (GameObject.FindGameObjectsWithTag("Ball4") != null)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Ball4").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("Ball4")[i]);
+            }
+        }
+    }
+
+    public void RestartRandomMode()
+    {
+        HideActiveMap();
+        RandomMode(mode);
+        pts = GameObject.Find("Points").GetComponent<Points>();
+        print(pts);
+        pts.points = 0;
     }
 
     public void QuitGame()

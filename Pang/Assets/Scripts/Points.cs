@@ -11,7 +11,7 @@ public class Points : MonoBehaviour
     public Collider2D[] bcollider;
     Map time;
     Controller heart;
-    public TMP_Text Tpoints;
+    public TMP_Text[] Tpoints;
     public TMP_Text Timer;
 
     public void AddHeartAndTimePoints()
@@ -28,7 +28,10 @@ public class Points : MonoBehaviour
         if(GameObject.FindGameObjectWithTag("Map") != null)
         {
             time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
-            Tpoints.text = points.ToString();
+            for (int i = 0; i < Tpoints.Length; i++)
+            {
+                Tpoints[i].text = points.ToString();
+            }
             Timer.text = ((int)time.timer).ToString();
         }
     }

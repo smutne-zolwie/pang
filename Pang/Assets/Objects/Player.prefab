@@ -346,10 +346,12 @@ MonoBehaviour:
   forcepower: 0.2
   shootpoint: {fileID: 3976140465401468768}
   bullet: {fileID: 7715375853580943727, guid: d3e633f8fda352f428222abbc3ea8803, type: 3}
+  hearts: 3
   heart3: {fileID: 3976140465960308155}
   heart2: {fileID: 3976140464322498048}
   heart1: {fileID: 3976140465156955712}
   blackheart: {fileID: 0}
+  OnDestroyPanel: {fileID: 7250093513372896043, guid: 5cbef419f7b2efa4eaa26f2da3580579, type: 3}
 --- !u!61 &3976140465502382549
 BoxCollider2D:
   m_ObjectHideFlags: 0

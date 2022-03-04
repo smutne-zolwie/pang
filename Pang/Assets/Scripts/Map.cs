@@ -13,7 +13,7 @@ public class Map : MonoBehaviour
     public bool levelIsCompleted = false;
     public GameObject[] panel;
     Menu menu;
-    //public int timepoints;
+    public GameObject OnDestroyPanel;
 
     private void Awake()
     {
@@ -22,6 +22,7 @@ public class Map : MonoBehaviour
     }
     void Start()
     {
+        //tworzy pilki
         for (int i = 0; i < ball.Length; i++)
         {
             Instantiate(ball[i], ballpos[i], ball[i].transform.rotation);
@@ -38,6 +39,12 @@ public class Map : MonoBehaviour
             levelIsCompleted = true;
         }
         ShowImage();
+
+        if (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            OnDestroyPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
     public void ShowImage()
     {
