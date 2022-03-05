@@ -14,9 +14,12 @@ public class Map : MonoBehaviour
     public GameObject[] panel;
     Menu menu;
     public GameObject OnDestroyPanel;
+    Points pts;
+    public int pointsForLevel = 0;
 
     private void Awake()
     {
+        pts = GameObject.Find("MapUI").GetComponent<Points>();
         Time.timeScale = 1;
         menu = GameObject.Find("UI").GetComponent<Menu>();
     }

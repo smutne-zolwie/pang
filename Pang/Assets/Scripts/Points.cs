@@ -16,7 +16,8 @@ public class Points : MonoBehaviour
 
     public void AddHeartAndTimePoints()
     {
-        heart = GameObject.FindGameObjectWithTag("Player").GetComponent<Controller>(); //problem gdy gracz nie zyje
+        //dla buttona
+        heart = GameObject.FindGameObjectWithTag("Player").GetComponent<Controller>();
         points += heart.hearts * 250;
     
         time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
@@ -25,8 +26,9 @@ public class Points : MonoBehaviour
 
     private void Update()
     {
-        if(GameObject.FindGameObjectWithTag("Map") != null)
+        if(GameObject.FindGameObjectWithTag("Map") != null) //tylko po to, zeby nie wywalalo mi bledu w konsoli, czytaj, jakby nie bylo w ifie
         {
+            //dodawanie punktow
             time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
             for (int i = 0; i < Tpoints.Length; i++)
             {

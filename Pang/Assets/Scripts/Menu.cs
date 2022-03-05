@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
@@ -12,8 +13,17 @@ public class Menu : MonoBehaviour
     public int imode;
     public GameObject randomModeCompleted;
     public GameObject campaignModeCompleted;
-    Points pts;
+    //Points pts;
+    //public int pointsForLevel = 0;
+    //public TMP_Text pointsLevel, timePointsT, heartPointsT;
+    //public int timePoints, heartPoints;
+    //Map time;
 
+
+    public void Start()
+    {
+        //pts = GameObject.Find("MapUI").GetComponent<Points>();
+    }
     public void CampaignMode()
     {
         imode = 0;
@@ -91,13 +101,15 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void RestartRandomMode()
+    public void Update()
     {
-        HideActiveMap();
-        RandomMode(mode);
-        pts = GameObject.Find("Points").GetComponent<Points>();
-        print(pts);
-        pts.points = 0;
+        //pointsForLevel = pts.points - pointsForLevel;
+        //pointsLevel.text = pointsForLevel.ToString();
+
+        //time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
+        //heartPointsT.text = "text";
+        //heartPointsT.text = "text";
+        //timePointsT.text = ((int)time.timer).ToString();
     }
 
     public void QuitGame()
