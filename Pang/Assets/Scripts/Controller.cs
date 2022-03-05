@@ -21,6 +21,10 @@ public class Controller : MonoBehaviour
     float vertical;
     float ladderSpeed = 8;
     public GameObject OnDestroyPanel;
+    public Sprite[] Costume;
+    public SpriteRenderer CostumeRenderer;
+    bool isShooting = false;
+
 
     void Start()
     {
@@ -28,6 +32,12 @@ public class Controller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         force = new Vector2(forcepower, 0);
         force3 = new Vector3(forcepower, 0, 0);
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isShooting = false;
     }
 
     void Update()
@@ -43,6 +53,8 @@ public class Controller : MonoBehaviour
         void Shoot()
         {
             Instantiate(bullet, shootpoint.position, shootpoint.rotation);
+            isShooting = true;
+            StartCoroutine(Wait());
         }
         ShowHearts();
 
@@ -96,12 +108,25 @@ public class Controller : MonoBehaviour
         //sterowanie
         if (Input.GetKey(KeyCode.D))
         {
+            CostumeRenderer.sprite = Costume[0];
+            CostumeRenderer.flipX = false;
             gameObject.transform.position += force3;
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
+            CostumeRenderer.sprite = Costume[0];
+            CostumeRenderer.flipX = true;
             gameObject.transform.position -= force3;
         }
+        else if (CostumeRenderer.flipX && !isShooting)
+            CostumeRenderer.sprite = Costume[1];
+        else if (!CostumeRenderer.flipX && !isShooting)
+            CostumeRenderer.sprite = Costume[1];
+        else if (CostumeRenderer.flipX && isShooting)
+            CostumeRenderer.sprite = Costume[2];
+        else if (!CostumeRenderer.flipX && isShooting)
+            CostumeRenderer.sprite = Costume[2];
+
 
         //dla drabiny
         if (isClimbing)
