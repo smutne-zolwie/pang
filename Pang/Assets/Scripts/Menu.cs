@@ -13,16 +13,17 @@ public class Menu : MonoBehaviour
     public int imode;
     public GameObject randomModeCompleted;
     public GameObject campaignModeCompleted;
-    //Points pts;
-    //public int pointsForLevel = 0;
-    //public TMP_Text pointsLevel, timePointsT, heartPointsT;
-    //public int timePoints, heartPoints;
-    //Map time;
+    Points pts;
+    //public int pointsForLevel;
+    public TMP_Text[] pointsLevel, timePointsT, heartPointsT, activeMapT;
+    public int timePoints, heartPoints;
+    Map time;
+    Controller hearts;
 
 
     public void Start()
     {
-        //pts = GameObject.Find("MapUI").GetComponent<Points>();
+        pts = GameObject.Find("MapUI").GetComponent<Points>();
     }
     public void CampaignMode()
     {
@@ -37,6 +38,7 @@ public class Menu : MonoBehaviour
         map[i+1].SetActive(true);
         i += 1;
         Destroy(GameObject.FindGameObjectWithTag("Player"));
+        pts.pointsForLevel = 0;
     }
 
     public void RandomMode(string rmode)
@@ -59,6 +61,7 @@ public class Menu : MonoBehaviour
         GameObject.FindGameObjectWithTag("Map").SetActive(false);
         RandomMode(mode);
         Destroy(GameObject.FindGameObjectWithTag("Player"));
+        pts.pointsForLevel = 0;
     }
 
     public void FinishRandomMode()
@@ -101,15 +104,28 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void Update()
+    public void LevelCompletedPanel()
     {
-        //pointsForLevel = pts.points - pointsForLevel;
-        //pointsLevel.text = pointsForLevel.ToString();
+        for (int i = 0; i < 2; i++)
+        {
+            //int ii = 0;    // wiem ze bardzo nieprofesjonalne, ale musi wykonac sie tylko raz, nie mam pomyslu
+            //if (ii == 0)
+            //{
+            //    pointsForLevel = pts.points - pointsForLevel;
+            //    ii = 1;
+            //}
+            pointsLevel[i].text = (pts.pointsForLevel).ToString();
 
-        //time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
-        //heartPointsT.text = "text";
-        //heartPointsT.text = "text";
-        //timePointsT.text = ((int)time.timer).ToString();
+            if (GameObject.FindGameObjectWithTag("Map") != null)
+                time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
+            timePointsT[i].text = ((int)time.timer * 50).ToString();
+
+            if(GameObject.FindGameObjectWithTag("Player") != null)
+                hearts = GameObject.FindGameObjectWithTag("Player").GetComponent<Controller>();
+            heartPointsT[i].text = (hearts.hearts * 250).ToString();
+
+            activeMapT[i].text = GameObject.FindGameObjectWithTag("Map").name;
+        }
     }
 
     public void QuitGame()

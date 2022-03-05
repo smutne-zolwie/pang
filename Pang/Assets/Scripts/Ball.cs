@@ -39,13 +39,26 @@ public class Ball : MonoBehaviour
     {
         //punktacja
         if (gameObject.CompareTag("Ball1"))
+        {
             value.points += 200;
+            value.pointsForLevel += 200;
+        }
         else if (gameObject.CompareTag("Ball2"))
+        {
             value.points += 150;
+            value.pointsForLevel += 150;
+        }
         else if (gameObject.CompareTag("Ball3"))
+        {
             value.points += 100;
+            value.pointsForLevel += 100;
+        }
         else if (gameObject.CompareTag("Ball4"))
+        {
             value.points += 50;
+            value.pointsForLevel += 50;
+        }
+            
 
         //jezeli zestrzelona - tworzy nowe 2 dziecka
         if (collision.CompareTag("Bullet"))

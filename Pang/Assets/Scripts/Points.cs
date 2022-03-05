@@ -13,13 +13,14 @@ public class Points : MonoBehaviour
     Controller heart;
     public TMP_Text[] Tpoints;
     public TMP_Text Timer;
+    public int pointsForLevel;
 
     public void AddHeartAndTimePoints()
     {
         //dla buttona
         heart = GameObject.FindGameObjectWithTag("Player").GetComponent<Controller>();
         points += heart.hearts * 250;
-    
+
         time = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
         points += ((int)time.timer) * 50;
     }
