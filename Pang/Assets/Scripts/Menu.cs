@@ -19,6 +19,7 @@ public class Menu : MonoBehaviour
     public int timePoints, heartPoints;
     Map time;
     Controller hearts;
+    public GameObject[] crazyMap;
 
 
     public void Start()
@@ -126,6 +127,17 @@ public class Menu : MonoBehaviour
 
             activeMapT[i].text = GameObject.FindGameObjectWithTag("Map").name;
         }
+    }
+
+    public void CrazyMode()
+    {
+        int mapIndex = Random.Range(0, 5);
+        crazyMap[mapIndex].SetActive(true);
+    }
+
+    public void NextLevelCrazy()
+    {
+        print("next level crazy");
     }
 
     public void QuitGame()

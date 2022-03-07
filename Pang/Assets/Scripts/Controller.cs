@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
         //do poruszania siê, zmienne
         rb = GetComponent<Rigidbody2D>();
         force = new Vector2(forcepower, 0);
-        force3 = new Vector3(forcepower, 0, 0);
+        force3 = new Vector3(0.2f, 0, 0);
     }
 
     IEnumerator Wait()
@@ -66,7 +66,6 @@ public class Controller : MonoBehaviour
             isShooting = true;
             StartCoroutine(Wait());
         }
-
         ShowHearts();
 
         //dla drabiny
@@ -121,15 +120,15 @@ public class Controller : MonoBehaviour
         {
             CostumeRenderer.sprite = Costume[0];
             CostumeRenderer.flipX = false;
-            //gameObject.transform.position += force3;
-            rb.AddForce(force);
+            gameObject.transform.position += force3;
+            //rb.AddForce(force);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             CostumeRenderer.sprite = Costume[0];
             CostumeRenderer.flipX = true;
-            //gameObject.transform.position -= force3;
-            rb.AddForce(-force);
+            gameObject.transform.position -= force3;
+            //rb.AddForce(-force);
         }
         else if (CostumeRenderer.flipX && !isShooting)
             CostumeRenderer.sprite = Costume[1];

@@ -78,6 +78,11 @@ public class Ball : MonoBehaviour
         else if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    Instantiate<GameObject>(smallerball[i], gameObject.transform.position, gameObject.transform.rotation);
+            //    smallerball[i].name = i.ToString();
+            //}
         }
     }
 }

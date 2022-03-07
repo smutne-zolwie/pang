@@ -456,7 +456,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2f75273cd2ac1db4a9da917fa4df1dfa, type: 3}
   - {fileID: 21300000, guid: 2fa7eaa4ed7690641931a43e8d23c6b7, type: 3}
   CostumeRenderer: {fileID: 3976140465502382505}
-  weapon: laser
+  weapon: singleGun
 --- !u!61 &3976140465502382549
 BoxCollider2D:
   m_ObjectHideFlags: 0
