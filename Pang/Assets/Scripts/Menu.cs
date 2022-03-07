@@ -129,16 +129,16 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void CrazyMode()
-    {
-        int mapIndex = Random.Range(0, 5);
-        crazyMap[mapIndex].SetActive(true);
-    }
+    //public void CrazyMode()
+    //{
+    //    int mapIndex = Random.Range(0, 5);
+    //    crazyMap[mapIndex].SetActive(true);
+    //}
 
-    public void NextLevelCrazy()
-    {
-        print("next level crazy");
-    }
+    //public void NextLevelCrazy()
+    //{
+    //    print("next level crazy");
+    //}
 
     public void QuitGame()
     {

@@ -62,6 +62,7 @@ public class Controller : MonoBehaviour
             else if (weapon == "laser")
             {
                 Instantiate(laser, shootpoint.position, laser.transform.rotation);
+             
             }
             isShooting = true;
             StartCoroutine(Wait());

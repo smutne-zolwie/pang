@@ -26,8 +26,8 @@ public class Ball : MonoBehaviour
         else
         {
             //spawnowanie noramalnie
-            Vector2 direction = new Vector2(100, 0);
-            spawnforce = Random.Range(1, 2);
+            Vector2 direction = new Vector2(100, 0);            
+            spawnforce = Random.Range(1, 3);
             if (spawnforce == 1)
                 rb.AddForce(direction);
             else if (spawnforce == 2)
