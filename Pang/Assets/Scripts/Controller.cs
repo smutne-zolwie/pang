@@ -10,14 +10,10 @@ public class Controller : MonoBehaviour
     Vector2 slide, jump, force; //chyba niepotrzebne
     Vector3 force3;
     public Transform shootpoint, shootpoint1, shootpoint2;
-    public GameObject bullet, harpoon;
+    public GameObject bullet, harpoon, laser;
     public int hearts = 3;
-    public GameObject heart3; //mozna 3 linijki zapisac jako 1
-    public GameObject heart2;
-    public GameObject heart1;
-    public SpriteMask blackheart; //nie bedzie uzywane
-    bool isClimbing; //2 w 1 linijce
-    bool isLadder;
+    public GameObject heart1, heart2, heart3;
+    bool isClimbing, isLadder;
     float vertical; //tak samo
     float ladderSpeed = 8;
     public GameObject OnDestroyPanel;
@@ -25,8 +21,6 @@ public class Controller : MonoBehaviour
     public SpriteRenderer CostumeRenderer;
     bool isShooting = false; //boole byly wyzej
     public string weapon;
-
-
 
     void Start()
     {
@@ -66,7 +60,9 @@ public class Controller : MonoBehaviour
                 Instantiate(harpoon, shootpoint.position, harpoon.transform.rotation);
             } 
             else if (weapon == "laser")
-                print("Laser"); //tzeba zmienic
+            {
+                Instantiate(laser, shootpoint.position, laser.transform.rotation);
+            }
             isShooting = true;
             StartCoroutine(Wait());
         }
