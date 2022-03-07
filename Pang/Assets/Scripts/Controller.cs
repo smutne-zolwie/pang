@@ -7,20 +7,20 @@ public class Controller : MonoBehaviour
 {
     Rigidbody2D rb;
     public float forcepower;
-    Vector2 slide, jump, force; //chyba niepotrzebne
+    Vector2 slide, jump, force;
     Vector3 force3;
-    public Transform shootpoint, shootpoint1, shootpoint2;
+    public Transform shootpoint, shootpoint1, shootpoint2, shotgun1, shotgun2;
     public GameObject bullet, harpoon, laser;
     public int hearts = 3;
     public GameObject heart1, heart2, heart3;
     bool isClimbing, isLadder;
-    float vertical; //tak samo
+    float vertical;
     float ladderSpeed = 8;
     public GameObject OnDestroyPanel;
     public Sprite[] Costume;
     public SpriteRenderer CostumeRenderer;
-    bool isShooting = false; //boole byly wyzej
-    public string weapon;
+    bool isShooting = false;
+    public string weapon = "single";
 
     void Start()
     {
@@ -48,21 +48,20 @@ public class Controller : MonoBehaviour
 
         void Shoot()
         {
-            if (weapon == "singleGun")
+            if (weapon == "single")
+            {
                 Instantiate(bullet, shootpoint.position, shootpoint.rotation);
-            else if (weapon == "doubleGun")
+            }
+            else if (weapon == "double")
             {
                 Instantiate(bullet, shootpoint1.position, shootpoint1.rotation);
                 Instantiate(bullet, shootpoint2.position, shootpoint2.rotation);
             }
-            else if (weapon == "harpoon")
+            else if (weapon == "shotgun")
             {
-                Instantiate(harpoon, shootpoint.position, harpoon.transform.rotation);
-            } 
-            else if (weapon == "laser")
-            {
-                Instantiate(laser, shootpoint.position, laser.transform.rotation);
-             
+                Instantiate(bullet, shootpoint.position, shootpoint.rotation);
+                Instantiate(bullet, shotgun1.position, shotgun1.rotation);
+                Instantiate(bullet, shotgun2.position, shotgun2.rotation);
             }
             isShooting = true;
             StartCoroutine(Wait());

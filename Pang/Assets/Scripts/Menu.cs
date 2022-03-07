@@ -14,7 +14,6 @@ public class Menu : MonoBehaviour
     public GameObject randomModeCompleted;
     public GameObject campaignModeCompleted;
     Points pts;
-    //public int pointsForLevel;
     public TMP_Text[] pointsLevel, timePointsT, heartPointsT, activeMapT;
     public int timePoints, heartPoints;
     Map time;
@@ -103,18 +102,18 @@ public class Menu : MonoBehaviour
                 Destroy(GameObject.FindGameObjectsWithTag("Ball4")[i]);
             }
         }
+        pts.points = 0;
+    }
+    public void AddPointsForLevel()
+    {
+        pts.points += (int)time.timer * 50;
+        pts.points += hearts.hearts * 250;
     }
 
     public void LevelCompletedPanel()
     {
         for (int i = 0; i < 2; i++)
         {
-            //int ii = 0;    // wiem ze bardzo nieprofesjonalne, ale musi wykonac sie tylko raz, nie mam pomyslu
-            //if (ii == 0)
-            //{
-            //    pointsForLevel = pts.points - pointsForLevel;
-            //    ii = 1;
-            //}
             pointsLevel[i].text = (pts.pointsForLevel).ToString();
 
             if (GameObject.FindGameObjectWithTag("Map") != null)
@@ -128,17 +127,6 @@ public class Menu : MonoBehaviour
             activeMapT[i].text = GameObject.FindGameObjectWithTag("Map").name;
         }
     }
-
-    //public void CrazyMode()
-    //{
-    //    int mapIndex = Random.Range(0, 5);
-    //    crazyMap[mapIndex].SetActive(true);
-    //}
-
-    //public void NextLevelCrazy()
-    //{
-    //    print("next level crazy");
-    //}
 
     public void QuitGame()
     {
