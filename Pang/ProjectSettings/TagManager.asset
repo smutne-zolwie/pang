@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
+  - Ladder
+  - Bullet
+  - Ball1
+  - Map
+  - Ball2
+  - Ball3
+  - Ball4
+  - Points
   layers:
   - Default
   - TransparentFX
@@ -11,10 +20,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ball
+  - Harpoon
+  - Laser
+  - Player
   - 
   - 
   - 
