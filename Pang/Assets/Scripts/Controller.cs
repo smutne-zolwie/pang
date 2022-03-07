@@ -7,23 +7,25 @@ public class Controller : MonoBehaviour
 {
     Rigidbody2D rb;
     public float forcepower;
-    Vector2 slide, jump, force;
+    Vector2 slide, jump, force; //chyba niepotrzebne
     Vector3 force3;
-    public Transform shootpoint;
-    public GameObject bullet;
+    public Transform shootpoint, shootpoint1, shootpoint2;
+    public GameObject bullet, harpoon;
     public int hearts = 3;
-    public GameObject heart3;
+    public GameObject heart3; //mozna 3 linijki zapisac jako 1
     public GameObject heart2;
     public GameObject heart1;
-    public SpriteMask blackheart;
-    bool isClimbing;
+    public SpriteMask blackheart; //nie bedzie uzywane
+    bool isClimbing; //2 w 1 linijce
     bool isLadder;
-    float vertical;
+    float vertical; //tak samo
     float ladderSpeed = 8;
     public GameObject OnDestroyPanel;
     public Sprite[] Costume;
     public SpriteRenderer CostumeRenderer;
-    bool isShooting = false;
+    bool isShooting = false; //boole byly wyzej
+    public string weapon;
+
 
 
     void Start()
@@ -52,10 +54,23 @@ public class Controller : MonoBehaviour
 
         void Shoot()
         {
-            Instantiate(bullet, shootpoint.position, shootpoint.rotation);
+            if (weapon == "singleGun")
+                Instantiate(bullet, shootpoint.position, shootpoint.rotation);
+            else if (weapon == "doubleGun")
+            {
+                Instantiate(bullet, shootpoint1.position, shootpoint1.rotation);
+                Instantiate(bullet, shootpoint2.position, shootpoint2.rotation);
+            }
+            else if (weapon == "harpoon")
+            {
+                Instantiate(harpoon, shootpoint.position, harpoon.transform.rotation);
+            } 
+            else if (weapon == "laser")
+                print("Laser"); //tzeba zmienic
             isShooting = true;
             StartCoroutine(Wait());
         }
+
         ShowHearts();
 
         //dla drabiny
@@ -110,13 +125,15 @@ public class Controller : MonoBehaviour
         {
             CostumeRenderer.sprite = Costume[0];
             CostumeRenderer.flipX = false;
-            gameObject.transform.position += force3;
+            //gameObject.transform.position += force3;
+            rb.AddForce(force);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             CostumeRenderer.sprite = Costume[0];
             CostumeRenderer.flipX = true;
-            gameObject.transform.position -= force3;
+            //gameObject.transform.position -= force3;
+            rb.AddForce(-force);
         }
         else if (CostumeRenderer.flipX && !isShooting)
             CostumeRenderer.sprite = Costume[1];
